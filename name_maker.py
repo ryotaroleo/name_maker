@@ -44,10 +44,10 @@ def main():
     for namae in namaes:
         if type(namae) == list:
             ###if int(args.jinkaku) + namae[0] in daikichi_numbers:
-            if 4 + namae[1] in daikichi_numbers:
+            if 5 + namae[1] in daikichi_numbers:
                   daikichi_names.append(namae)
         if type(namae) == tuple:
-            if 4+ namae[0][1] in daikichi_numbers:
+            if 5 + namae[0][1] in daikichi_numbers:
                   daikichi_names.append(namae)
     print("daikichi_names@Jinkaku_part",len(daikichi_names))
     #print(daikichi_names)
@@ -59,14 +59,14 @@ def main():
     for namae in namaes:
         if type(namae) == list:
                  ###if args.soukaku + namae[1]  in daikichi_numbers:
-                 if 7 + namae[1]  in daikichi_numbers:
+                 if 11 + namae[1]  in daikichi_numbers:
                       daikichi_names.append(namae)
         if type(namae) == tuple:
             total = 0
             for part in namae:
                 total +=part[1]
             ###if args.soukaku + total in daikichi_numbers:
-            if 7 + total in daikichi_numbers:
+            if 11 + total in daikichi_numbers:
                 daikichi_names.append(namae)
     print("daikichi_names@Soukaku_part",len(daikichi_names))
     #print(daikichi_names)
@@ -80,26 +80,26 @@ def main():
     for namae in namaes:
         if type(namae) == list:
                  ###if args.gaikaku + namae[1] + 1  in daikichi_numbers:
-                 if 3 + namae[1] + 1 in daikichi_numbers:
+                 if 6 + namae[1] + 1 in daikichi_numbers:
                       daikichi_names.append(namae)
         if type(namae) == tuple:
             total = 0
             ###if args.soukaku + total in daikichi_numbers:
             ###if args.gaikaku + namae[-1][1] in daikichi_numbers:
-            if 3 + namae[-1][1] in daikichi_numbers:
+            if 6 + namae[-1][1] in daikichi_numbers:
                 daikichi_names.append(namae)
     if len(daikichi_names) == 0:
         daikichi_names = []
         for namae in namaes:
             if type(namae) == list:
                      ###if args.gaikaku + namae[1] + 1  in daikichi_numbers:
-                     if 3 + namae[1] + 1 in kichi_numbers:
+                     if 6 + namae[1] + 1 in kichi_numbers:
                           daikichi_names.append(namae)
             if type(namae) == tuple:
                 total = 0
                 ###if args.soukaku + total in daikichi_numbers:
                 ###if args.gaikaku + namae[-1][1] in daikichi_numbers:
-                if 3 + namae[-1][1] in daikichi_numbers:
+                if 6 + namae[-1][1] in daikichi_numbers:
                     daikichi_names.append(namae)
 
 
