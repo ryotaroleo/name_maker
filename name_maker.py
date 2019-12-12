@@ -155,8 +155,7 @@ def get_kanji(letter):
     else:
         list = r.json()["results"]
     for i in list:
-        moji = "\\"+i['UCS']["対応するUCS"].replace("+","").replace("^","\\").lower()
-        kanji = moji.encode().decode("unicode-escape")
+        kanji = chr(int(i['UCS']["対応するUCS"][2:], 16))
         kanjis.append([kanji,i["総画数"]])
     return(kanjis)
 
